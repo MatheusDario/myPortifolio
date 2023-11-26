@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-@import url("https://fonts.googleapis.com/css2?family=Prata&family=Titillium+Web&display=swap");
+//@import url("https://fonts.googleapis.com/css2?family=Prata&family=Titillium+Web&display=swap");
 
   * {
     margin: 0;
@@ -29,6 +29,12 @@ export const GlobalStyles = createGlobalStyle`
     &:hover {
       opacity: .6;
     }
+  }
+
+  svg {
+    margin: 0;
+    padding: 0;
+    text-decoration: 0;
   }
 `;
 

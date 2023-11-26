@@ -53,7 +53,7 @@ export const BlueText = styled.span`
   color: ${({ theme }) => theme.colors.secondaryLight};
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
   padding-top: 2rem;
   padding-bottom: 5rem;
   color: ${({theme}) => theme.colors.white};
