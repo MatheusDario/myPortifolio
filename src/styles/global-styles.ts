@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-//@import url("https://fonts.googleapis.com/css2?family=Prata&family=Titillium+Web&display=swap");
 
   * {
     margin: 0;
@@ -15,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Titillium Web', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: ${({ theme }) => theme.font.sizes.medium};
     background-color: ${({theme}) => theme.colors.primary};
     color: ${({theme}) => theme.colors.white};
