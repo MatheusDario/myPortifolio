@@ -4,10 +4,12 @@ import ShowCase from '@/components/ShowCase';
 import MySkils from '@/components/MySkils';
 import MyProjects from '@/components/MyProjects';
 import Footer from '@/components/Footer';
+import NavBar from '@/components/NavBar';
 
 export default function HomePage() {
   return (
     <>
+      <NavBar />
       <MainContainer>
         <MainBody>
           <Container>
