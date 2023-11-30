@@ -24,11 +24,18 @@ import {
   LINKEDING_URL,
   PARTICLE_URL,
 } from '@/config/app-config';
+import { motion } from 'framer-motion';
+import { fadeInLeftVariant, fadeInRightVariant } from '@/utils/Variants';
 
 export default function ShowCase() {
   return (
     <Container id="Home">
-      <Content>
+      <Content
+        as={motion.div}
+        variants={fadeInLeftVariant}
+        initial="hidden"
+        whileInView="visible"
+      >
         <Heading>Hello!</Heading>
         <Title>
           I'm <BlueText>Matheus Dario</BlueText>
@@ -51,14 +58,43 @@ export default function ShowCase() {
           </Link>
         </IconContainer>
       </Content>
+
       <ContentAside>
         <ShowcaseParticleContainer>
-          <ShowcaseImageCard>
+          <ShowcaseImageCard
+            as={motion.div}
+            variants={fadeInRightVariant}
+            initial="hidden"
+            whileInView="visible"
+          >
             <CardPerfil src={IMGPERFIL_URL} alt="Profile image" />
           </ShowcaseImageCard>
-          <Particle src={PARTICLE_URL} />
-          <Particle2 src={PARTICLE_URL} />
-          <Particle3 src={PARTICLE_URL} />
+          <Particle
+            as={motion.img}
+            animate={{ x: [0, 100, 0], rotate: 360, scale: [1, 0.5, 1] }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+            }}
+            src={PARTICLE_URL}
+          />
+          <Particle2
+            src={PARTICLE_URL}
+            as={motion.img}
+            animate={{ x: [0, 100, 10], rotate: 360, scale: [1, 0.8, 1] }}
+            transition={{
+              duration: 18,
+              repeat: Infinity,
+            }}
+          />
+          <Particle3 src={PARTICLE_URL} 
+              as={motion.img}
+              animate={{ x: [0, -100, 10], rotate: 360, scale: [1, 0.8, 1] }}
+              transition={{
+                duration: 15,
+                repeat: Infinity,
+              }}
+          />
         </ShowcaseParticleContainer>
       </ContentAside>
     </Container>

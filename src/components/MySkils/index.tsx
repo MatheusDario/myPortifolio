@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import {
   BlueText,
   Container,
@@ -11,12 +12,18 @@ import {
   Title,
 } from './styled';
 import { Skils } from '@/utils/Data';
+import { fadeInLeftVariant, fadeInRightVariant } from '@/utils/Variants';
 
 export default function MySkils() {
   return (
     <Container id="Skills">
       <Content>
-        <SkillsCardContainer>
+        <SkillsCardContainer 
+           as={motion.div}
+           variants={fadeInLeftVariant}
+           initial="hidden"
+           whileInView="visible"
+        >
           {Skils.map((skill) => (
             <SkillsCard>
               <IconContainer>{<skill.icon></skill.icon>}</IconContainer>
@@ -25,7 +32,12 @@ export default function MySkils() {
           ))}
         </SkillsCardContainer>
       </Content>
-      <ContentAside>
+      <ContentAside 
+         as={motion.div}
+         variants={fadeInRightVariant}
+         initial="hidden"
+         whileInView="visible"
+      >
         <Heading>My Skils</Heading>
         <Title>
           What <BlueText>I can do</BlueText>
