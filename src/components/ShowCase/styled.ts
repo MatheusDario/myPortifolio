@@ -24,6 +24,10 @@ export const Title = styled.h1`
 
 export const Heading = styled.h4`
   font-size: ${({ theme }) => theme.font.sizes.medium};
+  @media (max-width:720px) {
+      display: block;
+      padding-top: 4%;
+    }
 `;
 
 export const SubTitle = styled.h3`
