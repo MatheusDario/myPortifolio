@@ -7,6 +7,10 @@ export const Container = styled.div`
   padding-bottom: 18%;
   padding-top: 10%;
   align-items: center;
+  @media (max-width:720px) {
+      display: block;
+      padding-bottom: 0;
+    }
 `;
 
 export const Content = styled.section``;

@@ -7,6 +7,9 @@ export const Container = styled.div`
   & div {
     flex: 1;
   }
+  @media ${({ theme }) => theme.breakpoints.mobile} {
+    display: block;
+  }
 `;
 
 export const Center = styled.div`
@@ -29,6 +32,9 @@ export const IconContainer = styled.span`
 export const PaddingContainer = styled.div`
   padding-top: 1rem;
   display: flex;
+  @media ${({ theme }) => theme.breakpoints.mobile} {
+    display: block;
+  }
 `;
 
 export const TechStackCard = styled.span`
@@ -40,6 +46,7 @@ export const TechStackCard = styled.span`
 
     @media ${({ theme }) => theme.breakpoints.mobile}{
         margin-right: 1rem;
+        margin-top: 1rem;
     }
 `;
 
@@ -70,6 +77,9 @@ export const MyButton = styled.button`
 export const ProjectImageContainer = styled.div`
   display: flex;
   justify-content: flex-end;
+  @media ${({ theme }) => theme.breakpoints.mobile} {
+    display: block;
+  }
 `
 
 export const ProjectImage = styled.img`

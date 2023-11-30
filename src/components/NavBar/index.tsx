@@ -8,14 +8,26 @@ import {
   NavbarContainer,
   PaddingContainer,
 } from './styled';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import NaveMenu from '../NavMenu';
+import { theme } from '@/styles/theme';
 
 export default function NavBar() {
   const [openMenu, setOpenMenu] = useState(false);
+  const [sticky, setSticky] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      window.scrollY > 50 ? setSticky(true) : setSticky(false);
+    }
+
+    window.addEventListener('scroll', onScroll);
+
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [])
 
   return (
-    <NavbarContainer>
+    <NavbarContainer background-color={sticky ? theme.colors.primary : 'transparent'}>
       <PaddingContainer>
         <Container>
           <FlexContainer>

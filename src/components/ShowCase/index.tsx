@@ -18,12 +18,16 @@ import {
 } from './styled';
 
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
-import { GITHUB_URL, IMGPERFIL_URL, LINKEDING_URL, PARTICLE_URL } from '@/config/app-config';
-
+import {
+  GITHUB_URL,
+  IMGPERFIL_URL,
+  LINKEDING_URL,
+  PARTICLE_URL,
+} from '@/config/app-config';
 
 export default function ShowCase() {
   return (
-    <Container>
+    <Container id="Home">
       <Content>
         <Heading>Hello!</Heading>
         <Title>
@@ -50,7 +54,7 @@ export default function ShowCase() {
       <ContentAside>
         <ShowcaseParticleContainer>
           <ShowcaseImageCard>
-            <CardPerfil src={IMGPERFIL_URL} alt='Profile image'/>
+            <CardPerfil src={IMGPERFIL_URL} alt="Profile image" />
           </ShowcaseImageCard>
           <Particle src={PARTICLE_URL} />
           <Particle2 src={PARTICLE_URL} />

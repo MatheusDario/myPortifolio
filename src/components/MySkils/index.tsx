@@ -14,7 +14,7 @@ import { Skils } from '@/utils/Data';
 
 export default function MySkils() {
   return (
-    <Container>
+    <Container id="Skills">
       <Content>
         <SkillsCardContainer>
           {Skils.map((skill) => (
@@ -38,11 +38,10 @@ export default function MySkils() {
           engaging and interactive web applications.
         </ParaText>
         <ParaText>
-            I have experience in using Next and React for building scalable and
-            maintainable applications. This has allowed me to create efficient
-            and sustainable code that can adapt to the changing needs of a
-            business.
-          </ParaText>
+          I have experience in using Next and React for building scalable and
+          maintainable applications. This has allowed me to create efficient and
+          sustainable code that can adapt to the changing needs of a business.
+        </ParaText>
       </ContentAside>
     </Container>
   );

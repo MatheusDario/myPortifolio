@@ -3,6 +3,11 @@ import styled from 'styled-components';
 export const Container = styled.div`
   padding-top: 4%;
   padding-bottom: 2%;
+  @media ${({ theme }) => theme.breakpoints.mobile} {
+    display: block;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
 `;
 
 export const Heading = styled.h4`

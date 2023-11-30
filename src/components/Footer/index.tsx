@@ -14,7 +14,7 @@ import {
 
 export default function Footer() {
   return (
-    <PaddingContainer>
+    <PaddingContainer id="Contact">
       <Heading>MY CONTACT</Heading>
       <Titile>
         Contact <BlueText>Me Here</BlueText>
@@ -29,12 +29,19 @@ export default function Footer() {
 
             <PaddingForm>
               <FormLabel>Email:</FormLabel>
-              <FormInput type="email" placeholder="Enter your e-mail"></FormInput>
+              <FormInput
+                type="email"
+                placeholder="Enter your e-mail"
+              ></FormInput>
             </PaddingForm>
 
             <PaddingForm>
               <FormLabel>Message:</FormLabel>
-              <FormInput width="250px" as="textarea" placeholder="Enter your message"></FormInput>
+              <FormInput
+                width="250px"
+                as="textarea"
+                placeholder="Enter your message"
+              ></FormInput>
             </PaddingForm>
 
             <FlexContainer>

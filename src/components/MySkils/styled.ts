@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   padding-bottom: 8%;
+  padding-top: 5%;
+  @media ${({ theme }) => theme.breakpoints.mobile} {
+    display: block;
+  }
 `;
 
 export const Content = styled.section``;
@@ -15,7 +19,7 @@ export const SkillsCardContainer = styled.div`
 
   @media ${({ theme }) => theme.breakpoints.mobile} {
     display: block;
-    padding: 0;
+    margin: 0 auto 3rem auto;
   }
 `;
 
@@ -47,6 +51,11 @@ export const Heading = styled.h4`
 export const ContentAside = styled.div`
   justify-content: flex-end;
   padding-left: 15%;
+  @media (max-width:720px) {
+      display: block;
+      padding: 0;
+      padding-left: 3%;
+    }
 `;
 
 export const BlueText = styled.span`
@@ -58,6 +67,7 @@ export const Title = styled.h2`
   padding-bottom: 5rem;
   color: ${({theme}) => theme.colors.white};
   font-size: ${({theme}) => theme.font.sizes.superLarge};
+
 `
 
 export const ParaText = styled.p`
@@ -65,4 +75,9 @@ export const ParaText = styled.p`
   font-size: ${({theme}) => theme.font.sizes.extraSmall};
   text-align: justify;
   padding-bottom: 2rem;
+
+  @media ${({ theme }) => theme.breakpoints.mobile} {
+    display: block;
+    padding-right: 3%;
+  }
 `;

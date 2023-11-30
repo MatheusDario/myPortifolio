@@ -29,3 +29,21 @@ export const MenuIcon = styled.a`
   display: flex;
   align-items: center;
 `;
+
+export const PaddingMenuItens = styled.div`
+  padding-top: 8%;
+`;
+
+export const FlexMenuItens = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+export const MenuItem = styled.a`
+  color: white;
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  cursor: pointer;
+  text-decoration: none;
+`

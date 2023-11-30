@@ -8,6 +8,9 @@ export const PaddingContainer = styled.div`
 export const FlexContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  @media (max-width: 1320px) {
+    padding-right: 3%;
+  }
 `;
 
 export const NavbarContainer = styled.nav`
@@ -29,6 +32,11 @@ export const Logo = styled.p`
   font-size: 2rem;
   font-weight: bold;
   color: white;
+  @media (max-width: 1320px) {
+    display: block;
+    padding-left: 3%;
+  }
+
 `;
 
 export const MenuIcon = styled.a`

@@ -4,14 +4,14 @@ import Project from '../Project';
 
 export default function MyProjects() {
   return (
-    <Container>
+    <Container id="Projects">
       <Heading>My Projects</Heading>
       <Title>
         What <BlueText>I Have Built</BlueText>
       </Title>
       {ProjectDetails.map((project) => (
         <Container key={project.id}>
-          <Project data={project}/>
+          <Project data={project} />
         </Container>
       ))}
     </Container>
