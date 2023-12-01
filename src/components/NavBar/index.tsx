@@ -11,6 +11,7 @@ import {
 import { useEffect, useState } from 'react';
 import NaveMenu from '../NavMenu';
 import { theme } from '@/styles/theme';
+import { AnimatePresence } from 'framer-motion';
 
 export default function NavBar() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -19,15 +20,17 @@ export default function NavBar() {
   useEffect(() => {
     const onScroll = () => {
       window.scrollY > 50 ? setSticky(true) : setSticky(false);
-    }
+    };
 
     window.addEventListener('scroll', onScroll);
 
     return () => window.removeEventListener('scroll', onScroll);
-  }, [])
+  }, []);
 
   return (
-    <NavbarContainer background-color={sticky ? theme.colors.primary : 'transparent'}>
+    <NavbarContainer
+      background-color={sticky ? theme.colors.primary : 'transparent'}
+    >
       <PaddingContainer>
         <Container>
           <FlexContainer>
@@ -39,8 +42,9 @@ export default function NavBar() {
             </MenuIcon>
           </FlexContainer>
         </Container>
-
-        {openMenu && <NaveMenu setOpenMenu={setOpenMenu} />}
+        <AnimatePresence>
+          {openMenu && <NaveMenu setOpenMenu={setOpenMenu} />}
+        </AnimatePresence>
       </PaddingContainer>
     </NavbarContainer>
   );

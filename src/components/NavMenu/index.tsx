@@ -10,6 +10,8 @@ import {
 } from './styled';
 import { AiOutlineClose } from 'react-icons/ai';
 import { navLinks } from '@/utils/Data';
+import { fadeInTopVariant, slideInLeft } from '@/utils/Variants';
+import { motion } from 'framer-motion';
 
 export type NavMenuProps = {
   setOpenMenu: Dispatch<SetStateAction<boolean>>;
@@ -17,7 +19,13 @@ export type NavMenuProps = {
 
 export default function NaveMenu({ setOpenMenu }: NavMenuProps) {
   return (
-    <Container>
+    <Container
+      as={motion.div}
+      variants={slideInLeft}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <PaddingContainer>
         <FlexContainer>
           <MenuIcon onClick={() => setOpenMenu(false)}>
@@ -26,7 +34,12 @@ export default function NaveMenu({ setOpenMenu }: NavMenuProps) {
         </FlexContainer>
       </PaddingContainer>
 
-      <PaddingMenuItens>
+      <PaddingMenuItens
+        as={motion.div}
+        variants={fadeInTopVariant}
+        initial="hidden"
+        whileInView="visible"
+      >
         <FlexMenuItens>
           {navLinks.map((link) => (
             <MenuItem

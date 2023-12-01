@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  padding-bottom: 15%;
-  padding-top: 5%;
+  padding-bottom: 18%;
+  padding-top: 15%;
   @media ${({ theme }) => theme.breakpoints.mobile} {
     display: block;
   }

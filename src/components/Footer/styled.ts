@@ -6,12 +6,12 @@ export const FlexContainer = styled.div`
 `;
 
 export const PaddingContainer = styled.div`
-  padding-top: 5%;
-  padding-bottom: 10%;
+  padding-top: 6%;
+  padding-bottom: 7%;
+  margin-top: 13%;
 `;
 
 export const SubPaddingContainer = styled.footer`
-  padding-top: 3rem;
 `;
 
 export const PaddingForm = styled.div`
@@ -53,7 +53,7 @@ export const MyButton = styled.button`
 `;
 
 export const ContactForm = styled.form`
-  padding-top: 15%;
+  padding-top: 5%;
   width: 40%;
 
   @media ${({ theme }) => theme.breakpoints.mobile} {

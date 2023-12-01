@@ -1,3 +1,4 @@
+import { fadeInBottomVariant, fadeInTopVariant } from '@/utils/Variants';
 import {
   BlueText,
   ContactForm,
@@ -11,17 +12,36 @@ import {
   SubPaddingContainer,
   Titile,
 } from './styled';
+import { motion } from 'framer-motion';
 
 export default function Footer() {
   return (
-    <PaddingContainer id="Contact">
+    <PaddingContainer
+      id="Contact"
+      as={motion.div}
+      variants={fadeInTopVariant}
+      initial="hidden"
+      whileInView="visible"
+    >
       <Heading>MY CONTACT</Heading>
       <Titile>
         Contact <BlueText>Me Here</BlueText>
       </Titile>
       <SubPaddingContainer>
-        <FlexContainer>
-          <ContactForm>
+        <FlexContainer
+           id="Contact"
+           as={motion.div}
+           variants={fadeInBottomVariant}
+           initial="hidden"
+           whileInView="visible"
+        >
+          <ContactForm
+             id="Contact"
+             as={motion.div}
+             variants={fadeInBottomVariant}
+             initial="hidden"
+             whileInView="visible"
+          >
             <PaddingForm>
               <FormLabel>Name:</FormLabel>
               <FormInput type="text" placeholder="Enter your name"></FormInput>

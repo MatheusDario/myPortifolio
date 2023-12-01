@@ -13,6 +13,8 @@ import {
 } from './styled';
 import Link from 'next/link';
 import { ProjectDetailsProps } from '@/utils/Data';
+import { fadeInLeftVariant } from '@/utils/Variants';
+import { motion } from 'framer-motion';
 
 export type ProjectsPros = {
   data: ProjectDetailsProps;
@@ -20,7 +22,12 @@ export type ProjectsPros = {
 
 export default function Project({ data }: ProjectsPros) {
   return (
-    <Container>
+    <Container
+      as={motion.div}
+      variants={fadeInLeftVariant}
+      initial="hidden"
+      whileInView="visible"
+    >
       <div>
         <Center>
           <Heading>{data.projetc_name}</Heading>
@@ -45,7 +52,7 @@ export default function Project({ data }: ProjectsPros) {
       </div>
 
       <ProjectImageContainer>
-        <ProjectImage src={data.projetc_img} alt='Projects Images' />
+        <ProjectImage src={data.projetc_img} alt="Projects Images" />
       </ProjectImageContainer>
     </Container>
   );
