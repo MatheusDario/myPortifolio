@@ -47,7 +47,7 @@ export default function Project({ data }: ProjectsPros) {
 
         <ParaText>{data.project_desc}</ParaText>
         <Link target="_blank" href={data.projet_url}>
-          <MyButton>Visit my Website</MyButton>
+          <MyButton>Visit my Project</MyButton>
         </Link>
       </div>
 

@@ -44,8 +44,8 @@ export default function ShowCase() {
           I'm a <BlueText>Web Developer</BlueText>
         </SubTitle>
         <ParaText>
-          Hello, my name is Matheus Dario and I'm a web developer width 2 years
-          of experience in creating web applications
+          Hello, I'm a web developer width 2 years of experience in creating web
+          applications.
         </ParaText>
         <IconContainer>
           <Link target="_blank" href={LINKEDING_URL}>
@@ -87,13 +87,14 @@ export default function ShowCase() {
               repeat: Infinity,
             }}
           />
-          <Particle3 src={PARTICLE_URL} 
-              as={motion.img}
-              animate={{ x: [0, -100, 10], rotate: 360, scale: [1, 0.8, 1] }}
-              transition={{
-                duration: 15,
-                repeat: Infinity,
-              }}
+          <Particle3
+            src={PARTICLE_URL}
+            as={motion.img}
+            animate={{ x: [0, -100, 10], rotate: 360, scale: [1, 0.8, 1] }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+            }}
           />
         </ShowcaseParticleContainer>
       </ContentAside>

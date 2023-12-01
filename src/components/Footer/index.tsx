@@ -56,6 +56,14 @@ export default function Footer() {
             </PaddingForm>
 
             <PaddingForm>
+              <FormLabel>Subject:</FormLabel>
+              <FormInput
+                type="email"
+                placeholder="Enter the subject"
+              ></FormInput>
+            </PaddingForm>
+
+            <PaddingForm>
               <FormLabel>Message:</FormLabel>
               <FormInput
                 width="250px"

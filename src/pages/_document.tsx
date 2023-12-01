@@ -36,10 +36,8 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="pt-BR">
-        <Head>
-          <title>Matheus Dario</title>
-        </Head>
+      <Html lang="en-EN">
+        <Head></Head>
         <body>
           <Main />
           <NextScript />
