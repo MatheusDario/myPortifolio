@@ -31,7 +31,7 @@ export const SkillsCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.primaryLight};
+  background-color: ${({ theme }) => theme.colors.secondary};
 
   @media ${({ theme }) => theme.breakpoints.mobile} {
     width: 100%;

@@ -21,6 +21,7 @@ export const NavbarContainer = styled.nav`
   z-index: 10;
   transition: all 300ms ease-in;
   background-color: ${({ theme }) => theme.colors.primary};
+  box-shadow: 2px 3px 8px 2px rgba(0,0,0,.2);
 `;
 
 export const Container = styled.div`
@@ -40,7 +41,7 @@ export const Logo = styled.p`
 `;
 
 export const MenuIcon = styled.a`
-  color: ${({theme}) => theme.colors.secondary};
+  color: ${({theme}) => theme.colors.secondaryLight};
   font-size: 2.5rem;
   cursor: pointer;
   transition: all 300ms ease;

@@ -38,7 +38,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-BR">
         <Head>
-
+          <title>Matheus Dario</title>
         </Head>
         <body>
           <Main />

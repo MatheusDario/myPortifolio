@@ -7,7 +7,7 @@ export const Container = styled.div`
   height: 100vh;
   width: 100%;
   z-index: 1;
-  background-color: ${({theme}) => theme.colors.primaryLight};
+  background-color: ${({theme}) => theme.colors.secondary};
 `;
 
 export const PaddingContainer = styled.div`
@@ -22,7 +22,7 @@ export const FlexContainer = styled.div`
 `;
 
 export const MenuIcon = styled.a`
-  color: ${({theme}) => theme.colors.secondary};
+  color: ${({theme}) => theme.colors.secondaryLight};
   font-size: 2.5rem;
   cursor: pointer;
   transition: all 300ms ease;

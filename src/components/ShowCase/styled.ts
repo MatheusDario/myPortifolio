@@ -72,6 +72,7 @@ export const ShowcaseImageCard = styled.div`
   border-radius: 1rem;
   position: relative;
   overflow: hidden;
+  box-shadow: 2px 3px 8px 2px rgba(0,0,0,.4);
 `;
 
 export const CardPerfil = styled.img``;

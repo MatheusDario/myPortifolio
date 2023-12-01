@@ -63,15 +63,15 @@ export const ContactForm = styled.form`
 `;
 
 export const FormLabel = styled.p`
-  color: ${({ theme }) => theme.colors.lightGray};
+  color: ${({ theme }) => theme.colors.white};
   padding-bottom: 10px;
 `;
 
 export const FormInput = styled.input`
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.primaryLight};
+  background-color: ${({ theme }) => theme.colors.secondary};
   border: 2px solid ${({ theme }) => theme.colors.lightGray};
-  color: ${({ theme }) => theme.colors.lightGray};
+  color: ${({ theme }) => theme.colors.white};
   border-radius: 5px;
   padding: 15px;
 
