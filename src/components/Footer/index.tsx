@@ -1,6 +1,8 @@
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { useForm } from 'react-hook-form';
 
 import { fadeInBottomVariant, fadeInTopVariant } from '@/utils/Variants';
 import {
@@ -19,50 +21,55 @@ import {
 } from './styled';
 
 export default function Footer() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  type FormProps = z.infer<typeof schema>;
 
-  function formValidator(e: any) {
-    let isValid = true;
+  const schema = z.object({
+    name: z.string().min(1, 'Please submit a valid name'),
+    email: z
+      .string()
+      .min(1, { message: 'This field has to be filled.' })
+      .email('This is not a valid email.'),
+    message: z.string().min(10, 'Please submit a valid message'),
+  });
 
-    if (name === '' || email === '' || message === '') {
-      alert('Todos os campos precisam estar preenchidos');
-      isValid = false;
-      return;
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormProps>({
+    mode: 'all',
+    resolver: zodResolver(schema),
+  });
+
+  const handleForm = (data: FormProps) => {
+    function sendEmail() {
+      const name = data.name;
+      const email = data.email;
+      const message = data.message;
+
+      const templateParams = {
+        from_name: name,
+        email: email,
+        message: message,
+      };
+      emailjs
+        .send(
+          'service_xhrq8qi',
+          'template_aox06v8',
+          templateParams,
+          'RJGzVAQBWfSj_a6rt',
+        )
+        .then(
+          (response) => {
+            alert('The message has been sent');
+          },
+          (err) => {
+            console.log(err);
+          },
+        );
     }
-    return isValid;
-  }
-
-  function sendEmail(e: any) {
-    e.preventDefault();
-    const templateParams = {
-      from_name: name,
-      email: email,
-      message: message,
-    };
-    formValidator(e)
-      ? emailjs
-          .send(
-            'service_xhrq8qi',
-            'template_aox06v8',
-            templateParams,
-            'RJGzVAQBWfSj_a6rt',
-          )
-          .then(
-            (response) => {
-              console.log('Email enviado', response.status, response.text);
-              setName('');
-              setEmail('');
-              setMessage('');
-              alert('The message has been sent');
-            },
-            (err) => {
-              console.log(err);
-            },
-          )
-      : alert('Faild send email');
-  }
+    return sendEmail();
+  };
 
   return (
     <PaddingContainer
@@ -71,13 +78,12 @@ export default function Footer() {
       variants={fadeInTopVariant}
       initial="hidden"
       whileInView="visible"
-      onSubmit={sendEmail}
     >
       <Heading>MY CONTACT</Heading>
       <Titile>
         Contact <BlueText>Me Here</BlueText>
       </Titile>
-      <SubPaddingContainer className="form">
+      <SubPaddingContainer onSubmit={handleSubmit(handleForm)} className="form">
         <FlexContainer
           as={motion.div}
           variants={fadeInBottomVariant}
@@ -96,8 +102,11 @@ export default function Footer() {
                 type="text"
                 placeholder="Enter your name"
                 className="username"
-                onChange={(e) => setName(e.target.value)}
+                {...register('name')}
               ></FormInput>
+              {errors.name?.message && (
+                <ErrorField>{errors.name.message}</ErrorField>
+              )}
             </PaddingForm>
 
             <PaddingForm>
@@ -105,8 +114,11 @@ export default function Footer() {
               <FormInput
                 type="email"
                 placeholder="Enter your e-mail"
-                onChange={(e) => setEmail(e.target.value)}
+                {...register('email')}
               ></FormInput>
+              {errors.email?.message && (
+                <ErrorField>{errors.email.message}</ErrorField>
+              )}
             </PaddingForm>
 
             <PaddingForm>
@@ -115,8 +127,11 @@ export default function Footer() {
                 width="250px"
                 as="textarea"
                 placeholder="Enter your message"
-                onChange={(e) => setMessage(e.target.value)}
+                {...register('message')}
               ></FormInput>
+              {errors.message?.message && (
+                <ErrorField>{errors.message.message}</ErrorField>
+              )}
             </PaddingForm>
 
             <FlexContainer>

@@ -79,4 +79,9 @@ export const FormInput = styled.input`
   }
 `;
 
-export const ErrorField = styled.span``;
+export const ErrorField = styled.p`
+  font-size: 9pt;
+  padding-top: 10px;
+  color: #FF4136;
+  font-style: italic;
+`;
