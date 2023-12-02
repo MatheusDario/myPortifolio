@@ -5,14 +5,13 @@ export const FlexContainer = styled.div`
   justify-content: center;
 `;
 
-export const PaddingContainer = styled.div`
+export const PaddingContainer = styled.footer`
   padding-top: 6%;
   padding-bottom: 7%;
   margin-top: 13%;
 `;
 
-export const SubPaddingContainer = styled.footer`
-`;
+export const SubPaddingContainer = styled.form``;
 
 export const PaddingForm = styled.div`
   padding-bottom: 2rem;
@@ -79,3 +78,5 @@ export const FormInput = styled.input`
     color: ${({ theme }) => theme.colors.lightGray};
   }
 `;
+
+export const ErrorField = styled.span``;
