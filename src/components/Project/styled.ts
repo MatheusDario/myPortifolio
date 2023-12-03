@@ -53,6 +53,7 @@ export const TechStackCard = styled.span`
 export const ParaText = styled.p`
   color: ${({ theme }) => theme.colors.lightGray};
   font-size: ${({ theme }) => theme.font.sizes.extraSmall};
+  text-align: justify;
   padding-top: 1.5rem;
   padding-bottom: 2rem;
 `;

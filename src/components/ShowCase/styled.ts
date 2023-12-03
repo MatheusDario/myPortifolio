@@ -108,3 +108,14 @@ export const Particle3 = styled.img`
     opacity: 0.6;
   }
 `;
+
+export const Particle4 = styled.img`
+  position: absolute;
+  top: 450px;
+  left: 100px;
+  transition: opacity 300ms ease-in-out;
+  &:hover {
+    opacity: 0.6;
+  }
+`;
+

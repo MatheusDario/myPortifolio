@@ -64,7 +64,7 @@ export const ProjectDetails = [
     id: 1,
     projetc_name: 'Register Students System',
     project_desc:
-      'Student registration system where only registered users can register, edit and delete students. The api was developed using nodejs',
+      'Student registration system where the front-end of the application was developed using react, only registered users can register, edit and delete students. The api-rest was developed using nodejs.',
     tech_stack: ['NodeJS', 'Javascript', 'React'],
     projetc_img: REGISTER_URL,
     projet_url: 'https://escola.matheusdario.com.br/',

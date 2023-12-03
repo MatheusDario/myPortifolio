@@ -15,6 +15,7 @@ import {
   Particle,
   Particle3,
   Particle2,
+  Particle4,
 } from './styled';
 
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
@@ -93,6 +94,15 @@ export default function ShowCase() {
             animate={{ x: [0, -100, 10], rotate: 360, scale: [1, 0.8, 1] }}
             transition={{
               duration: 15,
+              repeat: Infinity,
+            }}
+          />
+           <Particle4
+            src={PARTICLE_URL}
+            as={motion.img}
+            animate={{ y: [10, 50, 10], rotate: 360, scale: [1, 0.7, 1] }}
+            transition={{
+              duration: 12,
               repeat: Infinity,
             }}
           />
