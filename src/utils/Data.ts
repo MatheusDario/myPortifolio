@@ -57,7 +57,7 @@ export const ProjectDetails = [
       'A blog with a front-end using NextJS, Typescript that has a pagination feature and filters posts by category and that consumes an api developed using strapi. ',
     tech_stack: ['NextJs', 'Strapi', 'React', 'Typescript', 'StyledComponents'],
     projetc_img: BLOGIMG_URL,
-    projet_url: 'https://blog.matheusdario.com.br',
+    projet_url: 'https://blog.matheusdario.com.br/post/desenvolvedor-web-por-onde-comecar',
     repository_url: 'https://github.com/MatheusDario/blog-next',
   },
   {
