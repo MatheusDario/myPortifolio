@@ -70,7 +70,7 @@ export const ShowcaseImageCard = styled.div`
   border: 1px solid white;
   width: max-content;
   padding-top: 2rem;
-  border-radius: 1rem;
+  border-radius: 5rem;
   position: relative;
   overflow: hidden;
   box-shadow: 2px 3px 8px 2px rgba(0,0,0,.4);
