@@ -75,6 +75,7 @@ export const ParaText = styled.p`
   font-size: ${({theme}) => theme.font.sizes.extraSmall};
   text-align: justify;
   padding-bottom: 2rem;
+  line-height: 1.5em;
 
   @media ${({ theme }) => theme.breakpoints.mobile} {
     display: block;

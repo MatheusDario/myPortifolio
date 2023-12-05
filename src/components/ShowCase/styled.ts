@@ -43,6 +43,7 @@ export const ParaText = styled.p`
   font-size: ${({ theme }) => theme.font.sizes.extraSmall};
   padding-top: 2rem;
   padding-bottom: 4rem;
+  line-height: 1.5em;
 `;
 
 export const IconContainer = styled.span`

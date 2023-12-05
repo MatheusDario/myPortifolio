@@ -56,6 +56,7 @@ export const ParaText = styled.p`
   text-align: justify;
   padding-top: 1.5rem;
   padding-bottom: 2rem;
+  line-height: 1.5em;
 `;
 
 export const MyButton = styled.button`
