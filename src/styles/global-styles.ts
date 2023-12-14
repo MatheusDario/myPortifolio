@@ -16,7 +16,8 @@ export const GlobalStyles = createGlobalStyle`
   body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: ${({ theme }) => theme.font.sizes.medium};
-    background-color: ${({theme}) => theme.colors.primary};
+    //background-color: ${({theme}) => theme.colors.primary};
+    background: ${({theme}) => theme.colors.primary} url('images/background.svg');
     color: ${({theme}) => theme.colors.white};
   }
 
